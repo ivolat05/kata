@@ -52,18 +52,30 @@ const menuClose = () => {
 };
 menuClose();
 
-const parallax = document.querySelectorAll(".parallax");
+const parallaxOne = document.querySelectorAll(".parallax-1");
 const parallaxTwo = document.querySelectorAll(".parallax-2");
-if (parallax && parallaxTwo) {
+const parallaxThree = document.querySelectorAll(".parallax-3");
+const parallaxFoure = document.querySelectorAll(".parallax-4");
+const parallaxfive = document.querySelectorAll(".parallax-5");
+if (parallaxOne && parallaxTwo) {
 	document.querySelector("body").onmousemove = function (event) {
 		event = event || window.event; // кроссбраузерность
 		let x = event.clientX / window.innerWidth;
 		let y = event.clientY / window.innerHeight;
-		parallax.forEach((item) => {
-			item.style.transform = `translate(-${x * 35}px, ${y * 40}px) `;
+		parallaxOne.forEach((item) => {
+			item.style.transform = `translate(-${x * 15}px, -${y * 30}px) `;
 		});
 		parallaxTwo.forEach((item) => {
-			item.style.transform = `translate(${x * 40}px, -${y * 25}px) `;
+			item.style.transform = `translate(${x * 12}px, -${y * 56}px) `;
+		});
+		parallaxThree.forEach((item) => {
+			item.style.transform = `rotate(${x * 5}deg) `;
+		});
+		parallaxFoure.forEach((item) => {
+			item.style.transform = `rotate(-${x * 5}deg) `;
+		});
+		parallaxfive.forEach((item) => {
+			item.style.transform = `translate(-${x * 18}px, ${y * 22}px) `;
 		});
 	};
 }
@@ -88,16 +100,6 @@ gsap.utils.toArray(".section").forEach((panel, i) => {
 		pin: true,
 		pinSpacing: false,
 		onUpdate: (self) => {
-			if (self.progress.toFixed(3) == 1) {
-				footerAnimateBox.forEach((item) => {
-					item.classList.add("anim-start");
-				});
-			} else if (self.progress.toFixed(3) <= 0.6) {
-				footerAnimateBox.forEach((item) => {
-					item.classList.remove("anim-start");
-				});
-			}
-
 			if (
 				self.trigger.classList.contains("main") &&
 				self.progress.toFixed(3) == 0
@@ -108,6 +110,7 @@ gsap.utils.toArray(".section").forEach((panel, i) => {
 			}
 
 			animateAbout();
+			footerAnimate();
 		},
 	});
 	let nav = navs[i];
@@ -121,6 +124,26 @@ gsap.utils.toArray(".section").forEach((panel, i) => {
 	});
 });
 
+function footerAnimate() {
+	const about = document.querySelector(".footer");
+	if (about) {
+		let aboutBox = document.querySelectorAll(".footer-animate");
+		const aboutOffsetHeight = about.offsetHeight;
+		let scrollDistance = window.scrollY;
+		let containerSectionHeight =
+			document.querySelector(".container-section").scrollHeight;
+
+		if (scrollDistance > containerSectionHeight - aboutOffsetHeight - 100) {
+			aboutBox.forEach((item) => {
+				item.classList.add("anim-start");
+			});
+		} else {
+			aboutBox.forEach((item) => {
+				item.classList.remove("anim-start");
+			});
+		}
+	}
+}
 function animateAbout() {
 	const about = document.querySelector(".about");
 	if (about) {
