@@ -53,13 +53,17 @@ const menuClose = () => {
 menuClose();
 
 const parallax = document.querySelectorAll(".parallax");
-if (parallax) {
+const parallaxTwo = document.querySelectorAll(".parallax-2");
+if (parallax && parallaxTwo) {
 	document.querySelector("body").onmousemove = function (event) {
 		event = event || window.event; // кроссбраузерность
 		let x = event.clientX / window.innerWidth;
 		let y = event.clientY / window.innerHeight;
 		parallax.forEach((item) => {
-			item.style.transform = `translate(-${x * 40}px, -${y * 40}px) `;
+			item.style.transform = `translate(-${x * 35}px, ${y * 40}px) `;
+		});
+		parallaxTwo.forEach((item) => {
+			item.style.transform = `translate(${x * 40}px, -${y * 25}px) `;
 		});
 	};
 }
@@ -68,6 +72,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 let navs = gsap.utils.toArray(".nav-link");
 let triggerEnd;
 const footerAnimateBox = document.querySelectorAll(".footer-animate");
+const headerWrapp = document.querySelector(".header__wrapp");
 gsap.utils.toArray(".section").forEach((panel, i) => {
 	if (window.innerWidth >= 580) {
 		triggerEnd = "bottom 90px";
@@ -92,6 +97,17 @@ gsap.utils.toArray(".section").forEach((panel, i) => {
 					item.classList.remove("anim-start");
 				});
 			}
+
+			if (
+				self.trigger.classList.contains("main") &&
+				self.progress.toFixed(3) == 0
+			) {
+				headerWrapp.classList.add("line");
+			} else {
+				headerWrapp.classList.remove("line");
+			}
+
+			animateAbout();
 		},
 	});
 	let nav = navs[i];
@@ -104,4 +120,23 @@ gsap.utils.toArray(".section").forEach((panel, i) => {
 		});
 	});
 });
+
+function animateAbout() {
+	const about = document.querySelector(".about");
+	if (about) {
+		let aboutBox = document.querySelectorAll(".about__box");
+		const aboutOffsetHeight = about.offsetHeight;
+		let scrollDistance = window.scrollY;
+
+		if (scrollDistance > aboutOffsetHeight / 2) {
+			aboutBox.forEach((item) => {
+				item.classList.add("animate");
+			});
+		} else {
+			aboutBox.forEach((item) => {
+				item.classList.remove("animate");
+			});
+		}
+	}
+}
 

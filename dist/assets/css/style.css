@@ -383,7 +383,6 @@ button {
   top: 0;
   left: 0;
   padding-top: 20px;
-  padding-bottom: 30px;
 }
 
 .header__btn-open {
@@ -723,11 +722,16 @@ button {
   }
 }
 
-.header__wrapp {
+.header__wrapp.line {
   border-bottom: 1px solid #BFBFBF;
+}
+
+.header__wrapp {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
   padding-bottom: 10px;
   padding-left: 42px;
   padding-right: 46px;
+  position: relative;
 }
 @media (max-width: 1680px) {
   .header__wrapp {
@@ -1151,6 +1155,34 @@ button {
     margin-left: -20px;
     padding: 25px 20px 50px 20px;
   }
+}
+
+.about__box {
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.about__box-two {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.about__box.animate,
+.about__box-two.animate {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .process {
