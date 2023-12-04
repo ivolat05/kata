@@ -396,6 +396,12 @@ button {
   left: 0;
   padding-top: 20px;
 }
+@media (max-width: 1180px) {
+  .header {
+    padding-bottom: 10px;
+    border-radius: 0px 0px 37px 37px;
+  }
+}
 
 .header__btn-open {
   display: none;
@@ -736,6 +742,11 @@ button {
 
 .header__wrapp.line {
   border-bottom: 1px solid #BFBFBF;
+}
+@media (max-width: 1180px) {
+  .header__wrapp.line {
+    border: none;
+  }
 }
 
 .header__wrapp {
