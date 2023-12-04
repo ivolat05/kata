@@ -1014,6 +1014,12 @@ button {
 .about {
   border-radius: 47px 47px 0 0;
   background: #FFF;
+  padding-bottom: 200px !important;
+}
+@media (max-width: 578px) {
+  .about {
+    padding-bottom: 80px !important;
+  }
 }
 
 .about__wrapp-text {

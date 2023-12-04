@@ -63,19 +63,25 @@ if (parallaxOne && parallaxTwo) {
 		let x = event.clientX / window.innerWidth;
 		let y = event.clientY / window.innerHeight;
 		parallaxOne.forEach((item) => {
-			item.style.transform = `translate(-${x * 15}px, -${y * 30}px) `;
+			item.style.transform = `translate(-${x * 15 * 2}px, -${
+				y * 30 * 2
+			}px) `;
 		});
 		parallaxTwo.forEach((item) => {
-			item.style.transform = `translate(${x * 12}px, -${y * 56}px) `;
+			item.style.transform = `translate(${x * 12 * 2}px, -${
+				y * 56 * 2
+			}px) `;
 		});
 		parallaxThree.forEach((item) => {
-			item.style.transform = `rotate(${x * 5}deg) `;
+			item.style.transform = `rotate(${x * 5 * 2}deg) `;
 		});
 		parallaxFoure.forEach((item) => {
-			item.style.transform = `rotate(-${x * 5}deg) `;
+			item.style.transform = `rotate(-${x * 5 * 2}deg) `;
 		});
 		parallaxfive.forEach((item) => {
-			item.style.transform = `translate(-${x * 18}px, ${y * 22}px) `;
+			item.style.transform = `translate(-${x * 18 * 2}px, ${
+				y * 22 * 2
+			}px) `;
 		});
 	};
 }
