@@ -195,6 +195,13 @@ input[type=number]::-webkit-inner-spin-button {
   font-style: normal;
 }
 @font-face {
+  font-family: "mont";
+  font-display: swap;
+  src: url("../../assets/fonts/mont-11.woff2") format("woff2"), url("../../assets/fonts/mont-11.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../../assets/fonts/Montserrat-Medium.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Medium.woff") format("woff");
@@ -204,15 +211,15 @@ input[type=number]::-webkit-inner-spin-button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../assets/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../../assets/fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../../assets/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../../assets/fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 *,
@@ -944,7 +951,9 @@ button {
 }
 @media (max-width: 578px) {
   .skill__box {
+    font-family: "mont";
     font-size: 21.549px;
+    font-weight: 400;
     padding: 3px 17px;
   }
 }
