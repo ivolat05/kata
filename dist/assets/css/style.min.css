@@ -777,7 +777,7 @@ button {
 }
 @media (max-width: 578px) {
   .main {
-    padding-top: 140px;
+    padding-top: 30px !important;
     padding-bottom: 200px;
   }
 }
@@ -2497,6 +2497,51 @@ button {
     -webkit-transform: rotate(-13deg) translate(52px, -84px);
         -ms-transform: rotate(-13deg) translate(52px, -84px);
             transform: rotate(-13deg) translate(52px, -84px);
+  }
+}
+@media (max-width: 375px) {
+  .footer__main-wrapp {
+    width: 280px;
+    padding-top: 130px;
+  }
+  .footer-animate-0 {
+    -webkit-transform: rotate(-19deg) translate(12px, -48px);
+        -ms-transform: rotate(-19deg) translate(12px, -48px);
+            transform: rotate(-19deg) translate(12px, -48px);
+  }
+  .footer-animate-1 {
+    -webkit-transform: rotate(20deg) translate(135px, -110px);
+        -ms-transform: rotate(20deg) translate(135px, -110px);
+            transform: rotate(20deg) translate(135px, -110px);
+  }
+  .footer-animate-2 {
+    -webkit-transform: rotate(10deg) translate(25px, -68px);
+        -ms-transform: rotate(10deg) translate(25px, -68px);
+            transform: rotate(10deg) translate(25px, -68px);
+  }
+  .footer-animate-3 {
+    -webkit-transform: rotate(-12deg) translate(11px, -50px);
+        -ms-transform: rotate(-12deg) translate(11px, -50px);
+            transform: rotate(-12deg) translate(11px, -50px);
+  }
+  .footer-animate-6 {
+    padding-left: 23px;
+    padding-right: 23px;
+    -webkit-transform: rotate(-8deg) translate(92px, 15px);
+        -ms-transform: rotate(-8deg) translate(92px, 15px);
+            transform: rotate(-8deg) translate(92px, 15px);
+  }
+  .footer-animate-4 {
+    -webkit-transform: rotate(14deg) translate(-169px, 0px);
+        -ms-transform: rotate(14deg) translate(-169px, 0px);
+            transform: rotate(14deg) translate(-169px, 0px);
+  }
+  .footer-animate-5 {
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-transform: rotate(-13deg) translate(71px, -80px);
+        -ms-transform: rotate(-13deg) translate(71px, -80px);
+            transform: rotate(-13deg) translate(71px, -80px);
   }
 }
 .footer-animate {
