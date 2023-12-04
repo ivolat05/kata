@@ -2448,7 +2448,7 @@ button {
 }
 @media (max-width: 728px) {
   .footer__main-wrapp {
-    width: 330px;
+    width: 345px;
   }
   .footer-animate {
     padding: 3px 17px;
