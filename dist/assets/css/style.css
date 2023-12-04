@@ -280,6 +280,15 @@ button {
   cursor: pointer;
 }
 
+.container-section {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: center;
+}
+
 .section {
   padding-top: 83px;
   padding-bottom: 83px;
